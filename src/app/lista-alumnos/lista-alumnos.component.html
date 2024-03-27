@@ -1,0 +1,16 @@
+<table class="styled-table" >
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Edad</th>
+      <th>Curso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of alumnos" [ngClass]="{'angular': alumno.curso === 'Angular', 'react': alumno.curso === 'React', 'nodejs': alumno.curso === 'NodeJS'}">
+      <td>{{ alumno.nombre }}</td>
+      <td>{{ alumno.edad }}</td>
+      <td>{{ alumno.curso }}</td>
+    </tr>
+  </tbody>
+</table>
